@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Фоновое видео</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      font-family: sans-serif;
+      text-shadow: 2px 2px 10px black;
+    }
+  </style>
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="lv_0_20250513193249.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <div class="content">
+    Добро пожаловать!
+  </div>
+</body>
+</html>
